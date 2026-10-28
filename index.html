@@ -3,16 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Septic Pumping Camrose &amp; Camrose County | Free Pump-Out Requests</title>
-<meta name="description" content="Need septic pumping in Camrose or Camrose County? Serving Bawlf, New Norway, Hay Lakes, Kingman, Round Hill, Daysland, Tofield and area, plus Stettler County. Send one free request and we'll pass it to a local septic service. Acreages, farms, holding tanks.">
+<title>Septic Pumping Camrose &amp; Camrose County, AB | Free Pump-Out Requests</title>
+<meta name="description" content="Septic tank and holding tank pumping in Camrose and Camrose County: Bawlf, New Norway, Hay Lakes, Kingman, Round Hill, Daysland, Tofield and area, plus Stettler County. One free request, passed to a local septic service.">
+<meta name="robots" content="index,follow">
 <link rel="canonical" href="https://camroseseptic.ca/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Septic Pumping Camrose &amp; Camrose County">
+<meta property="og:description" content="Send one free pump-out request and a local septic service contacts you with a price and a date.">
+<meta property="og:url" content="https://camroseseptic.ca/">
+<meta property="og:locale" content="en_CA">
 <link rel="stylesheet" href="style.css">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Service","serviceType":"Septic tank pumping referral",
-"name":"Central Alberta Septic Pumping Requests",
-"description":"A free request service that connects property owners with independent local septic pumping providers. We do not pump tanks ourselves.",
-"areaServed":["Camrose AB","Camrose County AB","Bawlf AB","New Norway AB","Hay Lakes AB","Kingman AB","Round Hill AB","Bittern Lake AB","Ohaton AB","Daysland AB","Tofield AB","Stettler County AB"],
-"url":"https://camroseseptic.ca/"}
+{"@context":"https://schema.org","@graph":[
+{"@type":"Organization","@id":"https://camroseseptic.ca/#org","name":"Central Alberta Septic Requests","url":"https://camroseseptic.ca/","description":"An independent referral website that passes septic pumping requests to local septic providers. We do not pump tanks ourselves."},
+{"@type":"WebSite","@id":"https://camroseseptic.ca/#site","url":"https://camroseseptic.ca/","name":"Camrose Septic","inLanguage":"en-CA","publisher":{"@id":"https://camroseseptic.ca/#org"}},
+{"@type":"Service","@id":"https://camroseseptic.ca/#service","serviceType":"Septic tank pumping referral","name":"Septic pumping requests for Camrose & Camrose County","provider":{"@id":"https://camroseseptic.ca/#org"},"url":"https://camroseseptic.ca/","description":"A free request service that connects property owners with independent local septic pumping providers. Covers septic tanks, holding tanks, urgent backups and pre-sale pump-outs.",
+"areaServed":[{"@type":"City","name":"Camrose, AB"},{"@type":"AdministrativeArea","name":"Camrose County, AB"},{"@type":"Place","name":"Bawlf, AB"},{"@type":"Place","name":"New Norway, AB"},{"@type":"Place","name":"Hay Lakes, AB"},{"@type":"Place","name":"Kingman, AB"},{"@type":"Place","name":"Round Hill, AB"},{"@type":"Place","name":"Bittern Lake, AB"},{"@type":"Place","name":"Ohaton, AB"},{"@type":"Place","name":"Daysland, AB"},{"@type":"Place","name":"Tofield, AB"},{"@type":"AdministrativeArea","name":"Stettler County, AB"}]},
+{"@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How often should a septic tank be pumped?","acceptedAnswer":{"@type":"Answer","text":"Most acreage and farm septic tanks need pumping every 2 to 4 years, depending on tank size and how many people live in the home. Holding tanks need pumping whenever they fill, often every few weeks."}},
+{"@type":"Question","name":"What does septic pumping cost around Camrose?","acceptedAnswer":{"@type":"Answer","text":"A typical residential pump-out in central Alberta runs roughly CA$250 to CA$600, depending on tank size, distance and access. The provider who contacts you sets the actual price."}},
+{"@type":"Question","name":"Is this request free?","acceptedAnswer":{"@type":"Answer","text":"Yes. Sending a request costs nothing and you are under no obligation to book."}}]}
+]}
 </script>
 </head>
 <body>
@@ -37,9 +48,14 @@
 
 <section id="quote" class="formbox">
 <h2>Request a septic pump-out</h2>
-<!-- FORM BACKEND: replace YOUR_FORM_ID with a Formspree form id (see README.md). For Netlify Forms instead, remove action and add data-netlify="true". -->
-<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" name="septic-request">
-<input type="hidden" name="_subject" value="New septic pumping request">
+<!-- FORM BACKEND: FormSubmit.co (free, no account). Leads go to Matthew's email, with a copy to the bot inbox for logging. After activation, FormSubmit gives a random alias; swap it in for the email in the action URL so the address isn't visible in the page source. -->
+<form action="https://formsubmit.co/msumegi@gmail.com" method="POST" name="septic-request">
+<input type="hidden" name="_subject" value="New septic pumping request - camroseseptic.ca">
+<input type="hidden" name="_next" value="https://camroseseptic.ca/thanks.html">
+<input type="hidden" name="_cc" value="rangeroadtech+septic@mail.grokbot.com">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_blacklist" value="casino, crypto, viagra, seo services, backlinks, loan offer">
+<div class="hp" aria-hidden="true"><label>Leave this field empty<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
 <label>Name<input name="name" required autocomplete="name"></label>
 <label>Phone<input name="phone" type="tel" required autocomplete="tel"></label>
 <label>Email (optional)<input name="email" type="email" autocomplete="email"></label>
@@ -54,10 +70,25 @@
 </form>
 </section>
 
+
+<section id="faq">
+<h2>Common questions</h2>
+<h3>How often should a septic tank be pumped?</h3>
+<p>Most acreage and farm septic tanks around Camrose County need pumping every 2 to 4 years, depending on tank size and how many people live in the home. Holding tanks need pumping whenever they fill, often every few weeks for a cabin or shop.</p>
+<h3>What does septic pumping cost around Camrose?</h3>
+<p>A typical residential pump-out in central Alberta runs roughly CA$250 to CA$600, depending on tank size, distance and access. The provider who contacts you sets the actual price.</p>
+<h3>Can you help in winter?</h3>
+<p>Yes. Frozen lines and backups are common in January and February. Choose "As soon as possible (urgent)" on the form and we'll flag it.</p>
+<h3>Is this request free?</h3>
+<p>Yes. Sending a request costs nothing and you are under no obligation to book.</p>
+<h3>Which areas do you cover?</h3>
+<p>Camrose and all of Camrose County, including Bawlf, New Norway, Hay Lakes, Kingman, Round Hill, Bittern Lake, Ohaton, Daysland and Tofield. We also serve Stettler County.</p>
+</section>
+
 <section id="privacy" class="small">
 <h2>Privacy</h2>
 <p>We collect only what you type in the form, and use it only to pass your request to local septic providers serving your area and to follow up on that request. We don't sell your information to anyone else, and we don't add you to any mailing list unless you tick the optional reminder box. You can ask us to see, correct or delete your information at any time using the contact address below. This follows Canada's privacy law (PIPEDA) and anti-spam law (CASL).</p>
-<p>Contact: <span>privacy@camroseseptic.ca</span></p>
+<p>Contact: <a href="mailto:rangeroadtech+septic@mail.grokbot.com">rangeroadtech+septic@mail.grokbot.com</a></p>
 </section>
 </main>
 <footer class="small">Central Alberta Septic Requests is an independent referral website, not a septic company. Providers are independent businesses responsible for their own work, licensing and pricing.</footer>
