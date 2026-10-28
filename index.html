@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Septic Pumping Camrose &amp; Camrose County | Free Pump-Out Requests</title>
+<meta name="description" content="Need septic pumping in Camrose or Camrose County? Serving Bawlf, New Norway, Hay Lakes, Kingman, Round Hill, Daysland, Tofield and area, plus Stettler County. Send one free request and we'll pass it to a local septic service. Acreages, farms, holding tanks.">
+<link rel="canonical" href="https://camroseseptic.ca/">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","serviceType":"Septic tank pumping referral",
+"name":"Central Alberta Septic Pumping Requests",
+"description":"A free request service that connects property owners with independent local septic pumping providers. We do not pump tanks ourselves.",
+"areaServed":["Camrose AB","Camrose County AB","Bawlf AB","New Norway AB","Hay Lakes AB","Kingman AB","Round Hill AB","Bittern Lake AB","Ohaton AB","Daysland AB","Tofield AB","Stettler County AB"],
+"url":"https://camroseseptic.ca/"}
+</script>
+</head>
+<body>
+<header class="top"><strong>Central Alberta Septic Requests</strong></header>
+<main>
+<section class="hero">
+<h1>Septic pumping in Camrose &amp; Camrose County</h1>
+<p>Tell us about your tank once. We pass your request to a local septic service that covers your area, and they contact you with a price and a date. We also serve Stettler County.</p>
+<p class="note"><strong>Plain truth:</strong> this site is a free referral service. We don't own trucks or pump tanks. Independent local providers do the work and set their own prices.</p>
+<a class="btn" href="#quote">Request a pump-out</a>
+</section>
+
+<section>
+<h2>What people ask for</h2>
+<ul class="cards">
+<li><h3>Acreage &amp; farm septic tanks</h3><p>Routine pump-outs, usually every 2–4 years depending on tank size and household.</p></li>
+<li><h3>Holding tanks</h3><p>Regular scheduled pumping for cabins, shops and holding tanks.</p></li>
+<li><h3>Urgent backups &amp; frozen lines</h3><p>Slow drains, alarms or frozen lines in winter. Say it's urgent and we'll flag it.</p></li>
+<li><h3>Before selling a property</h3><p>Pump-out and inspection ahead of a sale or purchase.</p></li>
+</ul>
+</section>
+
+<section id="quote" class="formbox">
+<h2>Request a septic pump-out</h2>
+<!-- FORM BACKEND: replace YOUR_FORM_ID with a Formspree form id (see README.md). For Netlify Forms instead, remove action and add data-netlify="true". -->
+<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" name="septic-request">
+<input type="hidden" name="_subject" value="New septic pumping request">
+<label>Name<input name="name" required autocomplete="name"></label>
+<label>Phone<input name="phone" type="tel" required autocomplete="tel"></label>
+<label>Email (optional)<input name="email" type="email" autocomplete="email"></label>
+<label>Nearest town or legal land description<input name="location" required placeholder="e.g. Bawlf, or NW-12-38-14-W4"></label>
+<label>What do you need?
+<select name="service"><option>Routine septic pump-out</option><option>Holding tank pump-out</option><option>Urgent backup / alarm</option><option>Frozen line</option><option>Pump-out before sale</option><option>Other</option></select></label>
+<label>When?<select name="timing"><option>As soon as possible (urgent)</option><option>Within 2 weeks</option><option>Within a month</option><option>Just pricing for now</option></select></label>
+<label>Details (tank size, access, last pumped)<textarea name="details" rows="3"></textarea></label>
+<label class="check"><input type="checkbox" name="consent_share" value="yes" required> I agree that my details are shared with one or more local septic providers so they can contact me about this request.</label>
+<label class="check"><input type="checkbox" name="consent_marketing" value="yes"> Optional: send me an occasional reminder when my tank is likely due. (You can unsubscribe at any time.)</label>
+<button class="btn" type="submit">Send my request</button>
+</form>
+</section>
+
+<section id="privacy" class="small">
+<h2>Privacy</h2>
+<p>We collect only what you type in the form, and use it only to pass your request to local septic providers serving your area and to follow up on that request. We don't sell your information to anyone else, and we don't add you to any mailing list unless you tick the optional reminder box. You can ask us to see, correct or delete your information at any time using the contact address below. This follows Canada's privacy law (PIPEDA) and anti-spam law (CASL).</p>
+<p>Contact: <span>privacy@camroseseptic.ca</span></p>
+</section>
+</main>
+<footer class="small">Central Alberta Septic Requests is an independent referral website, not a septic company. Providers are independent businesses responsible for their own work, licensing and pricing.</footer>
+</body>
+</html>

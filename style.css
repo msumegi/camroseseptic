@@ -1,0 +1,10 @@
+*{box-sizing:border-box}body{margin:0;font:16px/1.5 system-ui,sans-serif;color:#1d2a24;background:#f6f8f5}
+.top{background:#2f5d3a;color:#fff;padding:.8rem 1rem}main{max-width:760px;margin:auto;padding:1rem}
+.hero h1{font-size:1.7rem;line-height:1.2;margin:.5rem 0}.note{background:#fff6d8;border-left:4px solid #e0b100;padding:.6rem .8rem}
+.btn{display:inline-block;background:#2f5d3a;color:#fff;border:0;border-radius:6px;padding:.8rem 1.2rem;font-size:1rem;text-decoration:none;cursor:pointer}
+.cards{list-style:none;padding:0;display:grid;gap:.8rem}.cards li{background:#fff;border-radius:8px;padding:.8rem 1rem;box-shadow:0 1px 3px #0001}.cards h3{margin:0 0 .3rem;font-size:1.05rem}
+@media(min-width:640px){.cards{grid-template-columns:1fr 1fr}}
+.formbox{background:#fff;border-radius:8px;padding:1rem;box-shadow:0 1px 3px #0001}label{display:block;margin:.6rem 0;font-weight:600}
+input,select,textarea{display:block;width:100%;margin-top:.25rem;padding:.6rem;font:inherit;border:1px solid #bbb;border-radius:6px}
+.check{font-weight:400;display:flex;gap:.5rem;align-items:flex-start}.check input{width:auto;margin-top:.3rem}
+.small{font-size:.85rem;color:#4a5a52}footer{max-width:760px;margin:auto;padding:1rem}
