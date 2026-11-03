@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rural Trades Front Desk demo | Camrose Septic</title>
+<meta name="description" content="Private sales demo of the Rural Trades Front Desk package. Example data only. Not a live service.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light">
+<!-- Private sales demo. Do not link this page from the site, do not add it to sitemap.xml, and do not list the path in robots.txt. -->
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;color-scheme:light}
+body{margin:0;font:16px/1.5 system-ui,sans-serif;color:#1d2a24;background:#f6f8f5;overflow-wrap:break-word}
+h1,h2,h3{text-wrap:balance;line-height:1.25}
+p,li{text-wrap:pretty}
+h1{font-size:1.6rem;margin:.2rem 0 .45rem}
+h2{font-size:1.28rem;margin:0 0 .4rem}
+h3{font-size:1.05rem;margin:0 0 .4rem}
+p{margin:.55rem 0}
+a{color:#2f5d3a;overflow-wrap:anywhere}
+button,a{touch-action:manipulation}
+button:focus,a:focus,.panel:focus{outline:3px solid #e0b100;outline-offset:2px}
+.col{max-width:760px;margin:0 auto;padding-left:1rem;padding-right:1rem}
+.banner{background:#fff6d8;border-bottom:4px solid #e0b100;color:#1d2a24}
+.banner p{margin:0;padding-top:.8rem;padding-bottom:.8rem;font-weight:700;line-height:1.35}
+.top{background:#2f5d3a;color:#fff}
+.top-inner{padding-top:.75rem;padding-bottom:.75rem}
+.top strong{display:block;font-size:1.05rem;line-height:1.3}
+.top-sub{display:block;margin-top:.1rem;font-size:.9rem;line-height:1.35;color:#e7f2ea}
+main.col{padding-top:1rem;padding-bottom:.5rem}
+.example{display:inline-block;margin:0 0 .45rem;padding:.15rem .55rem;background:#fff6d8;border:1px solid #e0b100;border-radius:999px;color:#1d2a24;font-size:.85rem;font-weight:700;line-height:1.3}
+.tablist{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:.5rem;margin:.85rem 0 .9rem}
+.tablist button{display:flex;align-items:center;justify-content:center;width:100%;min-width:0;min-height:48px;margin:0;padding:.6rem .4rem;border:2px solid #2f5d3a;border-radius:8px;background:#fff;color:#1d2a24;font:inherit;font-weight:700;line-height:1.25;text-align:center;white-space:normal;cursor:pointer;-webkit-appearance:none;appearance:none}
+.tablist button span{min-width:0;text-align:center;text-wrap:balance}
+.tablist button[aria-selected="true"]{background:#2f5d3a;color:#fff}
+button::-moz-focus-inner{border:0;padding:0}
+.panel{margin:0 0 .5rem}
+.lead{margin-top:0}
+.block{background:#fff;border-radius:8px;padding:.85rem .9rem;box-shadow:0 1px 3px #0001;margin:.75rem 0;min-width:0;max-width:100%}
+.script{margin:.35rem 0 0;padding:.1rem 0 .1rem .75rem;border-left:4px solid #2f5d3a;font-size:1.05rem;line-height:1.45}
+.script p{margin:0}
+ul.clean{margin:.35rem 0 .2rem;padding-left:1.2rem}
+ul.clean li{margin:.28rem 0}
+.turn+.turn{margin-top:.65rem;padding-top:.65rem;border-top:1px solid #e3ebe4}
+.who{margin:0;font-size:.85rem;font-weight:700;line-height:1.3;color:#2f5d3a}
+.turn p{margin:.15rem 0 0}
+.turn.caller .who{color:#3d4f46}
+.callback{margin-top:.85rem;padding:.7rem .75rem;background:#fff6d8;border-left:4px solid #e0b100;border-radius:0 6px 6px 0}
+.callback p{margin:.25rem 0 0}
+.callback .who{color:#1d2a24}
+.chat{background:#e7efe8;border-radius:8px;box-shadow:0 1px 3px #0001;margin:.75rem 0;max-width:100%;min-width:0}
+.chat-top{background:#2f5d3a;color:#fff;padding:.7rem .85rem;border-radius:8px 8px 0 0}
+.chat-name{margin:0;font-weight:700;line-height:1.3}
+.chat-sub{margin:.12rem 0 0;font-size:.85rem;line-height:1.35;color:#e7f2ea}
+.chat-body{padding:.75rem .7rem .85rem}
+.chip{display:block;width:fit-content;max-width:100%;margin:.15rem auto .65rem;padding:.4rem .75rem;background:#fff6d8;border:1px solid #e0b100;border-radius:999px;text-align:center;font-size:.85rem;line-height:1.35;color:#1d2a24}
+.msg{display:flex;margin:.4rem 0}
+.msg.shop{justify-content:flex-end}
+.msg.them{justify-content:flex-start}
+.bubble{max-width:88%;min-width:0;padding:.55rem .7rem;border-radius:14px;line-height:1.4;overflow-wrap:break-word}
+.bubble p{margin:.15rem 0 0}
+.bubble .who{margin:0}
+.bubble.shop{background:#2f5d3a;color:#fff;border-bottom-right-radius:4px}
+.bubble.shop .who{color:#fff}
+.bubble.shop .time{color:#e7f2ea}
+.bubble.them{background:#fff;color:#1d2a24;border-bottom-left-radius:4px}
+.bubble.them .time{color:#4a5a52}
+.time{display:block;margin-top:.3rem;font-size:.85rem;line-height:1.3}
+.review-link{display:inline-block;max-width:100%;min-height:48px;margin:.25rem 0 .1rem;padding:.75rem 0;box-sizing:border-box;color:#fff;font-weight:700;line-height:1.3;text-decoration:underline;text-underline-offset:.15em}
+.bubble.shop .review-link:visited{color:#fff}
+.chat-foot{margin:0;padding:0 .75rem .75rem;font-size:.85rem;line-height:1.35;color:#4a5a52}
+.steps{list-style:none;margin:.2rem 0 0;padding:0}
+.steps li{display:flex;align-items:flex-start;margin:0 0 .55rem;padding:.7rem;background:#f6f8f5;border-radius:8px;min-width:0}
+.steps li:last-child{margin-bottom:0}
+.step-n{flex:none;width:2rem;height:2rem;margin-right:.7rem;border-radius:50%;background:#2f5d3a;color:#fff;font-weight:700;line-height:1;display:flex;align-items:center;justify-content:center}
+.steps p{flex:1;min-width:0;margin:0}
+.small{font-size:.85rem;color:#4a5a52}
+.stats{list-style:none;margin:.55rem 0 .7rem;padding:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:.55rem}
+.stats li{background:#f6f8f5;border:1px solid #d7e0d9;border-radius:8px;padding:.7rem .75rem;min-width:0}
+.n{margin:0;font-size:1.8rem;line-height:1.1;font-weight:700;color:#2f5d3a;font-variant-numeric:tabular-nums}
+.l{margin:.2rem 0 0;font-size:.95rem;line-height:1.3}
+.bars{list-style:none;margin:.35rem 0 0;padding:0}
+.bars li{margin:0 0 .75rem;min-width:0}
+.bars li:last-child{margin-bottom:0}
+.bar-top{display:flex;justify-content:space-between;align-items:baseline}
+.bar-name{min-width:0;font-weight:700}
+.bar-value{flex:none;margin-left:.75rem;font-weight:700;color:#2f5d3a;font-variant-numeric:tabular-nums}
+.track{margin-top:.3rem;height:.8rem;background:#e3ebe4;border-radius:999px;overflow:hidden}
+.fill{display:block;height:100%;background:#2f5d3a;border-radius:999px}
+.foot{padding-top:.25rem;padding-bottom:1.25rem}
+.foot a{display:inline-block;max-width:100%;min-height:48px;padding:.9rem 0;box-sizing:border-box;color:#2f5d3a;font-size:.85rem;line-height:1.35;text-decoration:underline;text-underline-offset:.15em}
+.foot a:visited{color:#2f5d3a;text-decoration:underline}
+@media (min-width:720px){
+  .tablist{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .stats{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1rem;align-items:start}
+  .split>.block,.split>.chat{margin-top:0}
+}
+.panel[hidden]{display:none !important}
+@media (hover:hover){
+  .tablist button:hover{background:#e7efe8}
+  .tablist button[aria-selected="true"]:hover{background:#2f5d3a}
+  .foot a:hover{color:#24492e}
+}
+</style>
+</head>
+<body>
+<div class="banner" role="note">
+  <p class="col">Demo with example data. No real customers, calls or texts.</p>
+</div>
+<header class="top">
+  <div class="col top-inner">
+    <strong>Camrose Septic</strong>
+    <span class="top-sub">Rural Trades Front Desk</span>
+  </div>
+</header>
+<main class="col">
+  <h1>Rural Trades Front Desk</h1>
+  <p>This is a phone and text package for a septic or trades shop. It answers the shop phone while the crew is on a job, texts people back when a call is missed, asks for a review after the work is done, and shows the month on one page.</p>
+  <p>You still make the booking. A person calls the customer back to confirm the day and the price. The package does not drive the truck, and it does not invent a time.</p>
+  <p>The sections below use made-up people, so you can see it without a live call. The example shop is Camrose Septic.</p>
+
+  <div class="tablist" role="tablist" aria-label="Example sections">
+    <button type="button" role="tab" id="tab-phone" aria-controls="panel-phone" aria-selected="true"><span>AI phone answering</span></button>
+    <button type="button" role="tab" id="tab-text" aria-controls="panel-text" aria-selected="false" tabindex="-1"><span>Missed&#8209;call text&#8209;back</span></button>
+    <button type="button" role="tab" id="tab-reviews" aria-controls="panel-reviews" aria-selected="false" tabindex="-1"><span>Review request flow</span></button>
+    <button type="button" role="tab" id="tab-results" aria-controls="panel-results" aria-selected="false" tabindex="-1"><span>Monthly results</span></button>
+  </div>
+
+  <section class="panel" id="panel-phone" role="tabpanel" aria-labelledby="tab-phone" tabindex="0">
+    <p class="example">Example data</p>
+    <h2>AI phone answering</h2>
+    <p class="lead">A virtual assistant answers, says it is on a recorded line, and writes down the job. A person from the shop calls back to confirm the time and the price.</p>
+    <div class="split">
+      <div class="block">
+        <h3>What the caller hears</h3>
+        <blockquote class="script">
+          <p>Thanks for calling Camrose Septic, I'm the virtual assistant on a recorded line. I can take a pump&#8209;out request. A person from the shop will call you back to confirm a time and a price. How can I help?</p>
+        </blockquote>
+      </div>
+      <div class="block">
+        <h3>What the assistant writes down</h3>
+        <ul class="clean">
+          <li>Name</li>
+          <li>Location</li>
+          <li>Rural address or legal land description</li>
+          <li>How urgent it is</li>
+          <li>Callback number</li>
+        </ul>
+        <p>A person calls back to confirm the day and the price. The assistant does not set either one.</p>
+      </div>
+    </div>
+    <div class="block">
+      <h3>Sample call</h3>
+      <div class="turn">
+        <p class="who">Assistant</p>
+        <p>Thanks for calling Camrose Septic, I'm the virtual assistant on a recorded line. I can take a pump&#8209;out request. A person from the shop will call you back to confirm a time and a price. How can I help?</p>
+      </div>
+      <div class="turn caller">
+        <p class="who">Jordan Hale</p>
+        <p>Hi, I need a septic tank pumped at our acreage. It's a regular house tank.</p>
+      </div>
+      <div class="turn">
+        <p class="who">Assistant</p>
+        <p>I can write that down. What's your name?</p>
+      </div>
+      <div class="turn caller">
+        <p class="who">Jordan Hale</p>
+        <p>Jordan Hale.</p>
+      </div>
+      <div class="turn">
+        <p class="who">Assistant</p>
+        <p>Whereabouts is the tank? The nearest town, a rural address, or the legal land description.</p>
+      </div>
+      <div class="turn caller">
+        <p class="who">Jordan Hale</p>
+        <p>South of Bawlf. Legal land description NW&#8209;12&#8209;47&#8209;20&#8209;W4. The driveway is 28412 Township Road 470.</p>
+      </div>
+      <div class="turn">
+        <p class="who">Assistant</p>
+        <p>Is this urgent?</p>
+      </div>
+      <div class="turn caller">
+        <p class="who">Jordan Hale</p>
+        <p>No. Anytime in the next two weeks is fine.</p>
+      </div>
+      <div class="turn">
+        <p class="who">Assistant</p>
+        <p>What's the best callback number?</p>
+      </div>
+      <div class="turn caller">
+        <p class="who">Jordan Hale</p>
+        <p>(780) 555&#8209;0142.</p>
+      </div>
+      <div class="turn">
+        <p class="who">Assistant</p>
+        <p>I have Jordan Hale, septic tank pump&#8209;out, south of Bawlf, NW&#8209;12&#8209;47&#8209;20&#8209;W4, 28412 Township Road 470, not urgent, within two weeks, callback (780) 555&#8209;0142. A person will call you to confirm the day and the price.</p>
+      </div>
+      <div class="turn caller">
+        <p class="who">Jordan Hale</p>
+        <p>Perfect, thanks.</p>
+      </div>
+      <div class="turn">
+        <p class="who">Assistant</p>
+        <p>Thanks for calling. Goodbye.</p>
+      </div>
+      <div class="callback">
+        <p class="who">Alex Berger calls back</p>
+        <p>Later that afternoon Alex Berger, a person at the shop, phones Jordan at (780) 555&#8209;0142. They confirm Thursday between 10 a.m. and noon and book the pump&#8209;out. The assistant does not choose the time or the price.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-text" role="tabpanel" aria-labelledby="tab-text" tabindex="0" hidden>
+    <p class="example">Example data</p>
+    <h2>Missed&#8209;call text&#8209;back</h2>
+    <p class="lead">If a call rings through and nobody answers, the caller gets a text. They can reply with the job. You still call them back to book it.</p>
+    <div class="split">
+      <div class="chat">
+        <div class="chat-top">
+          <p class="chat-name">Pat Okoro</p>
+          <p class="chat-sub">Missed call · (780) 555&#8209;0168</p>
+        </div>
+        <div class="chat-body">
+          <p class="chip">Missed call · Tue 2:14 p.m.</p>
+          <div class="msg shop">
+            <div class="bubble shop">
+              <p class="who">Camrose Septic</p>
+              <p>Hi, this is Camrose Septic. Sorry we missed your call. We're likely on a job. Reply with your name, where you are, and what you need, and a person will call you back.</p>
+              <p class="time">2:14 p.m.</p>
+            </div>
+          </div>
+          <div class="msg them">
+            <div class="bubble them">
+              <p class="who">Pat Okoro</p>
+              <p>Pat Okoro. The holding tank alarm is beeping east of Hay Lakes. Legal land description SE&#8209;4&#8209;48&#8209;20&#8209;W4. Can you come this week?</p>
+              <p class="time">2:16 p.m.</p>
+            </div>
+          </div>
+          <div class="msg shop">
+            <div class="bubble shop">
+              <p class="who">Camrose Septic</p>
+              <p>Thanks, Pat. This week is fine if it is not overflowing today. Is (780) 555&#8209;0168 the best number to call?</p>
+              <p class="time">2:17 p.m.</p>
+            </div>
+          </div>
+          <div class="msg them">
+            <div class="bubble them">
+              <p class="who">Pat Okoro</p>
+              <p>Yes, that number. Not overflowing. This week is fine.</p>
+              <p class="time">2:18 p.m.</p>
+            </div>
+          </div>
+          <div class="msg shop">
+            <div class="bubble shop">
+              <p class="who">Camrose Septic</p>
+              <p>Noted. A person from the shop will call you to confirm a day.</p>
+              <p class="time">2:18 p.m.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="block">
+        <h3>What happened</h3>
+        <ul class="clean">
+          <li>Nobody picked up, so the text sent itself.</li>
+          <li>Pat Okoro replied with a name, a place east of Hay Lakes, the legal land description, and that this week is soon enough.</li>
+          <li>The shop has a callback number, (780) 555&#8209;0168. A person still has to call to book the day.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-reviews" role="tabpanel" aria-labelledby="tab-reviews" tabindex="0" hidden>
+    <p class="example">Example data</p>
+    <h2>Review request flow</h2>
+    <p class="lead">After the job is finished, the customer gets one text asking for a review. Nothing goes out while the work is still open.</p>
+    <div class="split">
+      <div class="block">
+        <h3>How it runs</h3>
+        <ul class="steps" role="list">
+          <li role="listitem"><span class="step-n">1</span><p>Mark the job finished. In this example, Morgan Leung's tank pump&#8209;out near Round Hill is done.</p></li>
+          <li role="listitem"><span class="step-n">2</span><p>The next day, one text goes out. No text is sent before the work is finished.</p></li>
+          <li role="listitem"><span class="step-n">3</span><p>The customer can tap the review link. On this demo the link goes nowhere.</p></li>
+          <li role="listitem"><span class="step-n">4</span><p>A new review is counted on the monthly results page.</p></li>
+        </ul>
+      </div>
+      <div class="chat">
+        <div class="chat-top">
+          <p class="chat-name">Morgan Leung</p>
+          <p class="chat-sub">Day after the job · (780) 555&#8209;0194</p>
+        </div>
+        <div class="chat-body">
+          <div class="msg shop">
+            <div class="bubble shop">
+              <p class="who">Camrose Septic</p>
+              <p>Hi Morgan, it's Camrose Septic. Thanks for having us pump the tank near Round Hill yesterday. If the work was good, a short review helps neighbours find a local pumper.</p>
+              <a class="review-link" href="#">Leave a review (example link)</a>
+              <p>Reply STOP if you don't want these texts.</p>
+              <p class="time">Wed 4:05 p.m.</p>
+            </div>
+          </div>
+        </div>
+        <p class="chat-foot">Example link. It does not open a review page.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="panel" id="panel-results" role="tabpanel" aria-labelledby="tab-results" tabindex="0" hidden>
+    <p class="example">Example data</p>
+    <h2>Monthly results</h2>
+    <p class="lead">At the end of the month you get one page: how many calls were answered, how many missed calls came back, how many reviews came in, and how many jobs were booked.</p>
+    <div class="block">
+      <h3>October 2026</h3>
+      <p class="small">An example month for the shop. Not live numbers.</p>
+      <ul class="stats" role="list">
+        <li role="listitem"><p class="n">86</p><p class="l">Calls answered</p></li>
+        <li role="listitem"><p class="n">23</p><p class="l">Missed calls recovered</p></li>
+        <li role="listitem"><p class="n">7</p><p class="l">Reviews gained</p></li>
+        <li role="listitem"><p class="n">31</p><p class="l">Jobs booked</p></li>
+      </ul>
+      <p class="small">Recovered means the person replied to the missed&#8209;call text, so the shop got another chance at the job.</p>
+      <h3>The same numbers, as bars</h3>
+      <ul class="bars" role="list">
+        <li role="listitem">
+          <div class="bar-top"><span class="bar-name">Calls answered</span><span class="bar-value">86</span></div>
+          <div class="track"><span class="fill" style="width:100%"></span></div>
+        </li>
+        <li role="listitem">
+          <div class="bar-top"><span class="bar-name">Missed calls recovered</span><span class="bar-value">23</span></div>
+          <div class="track"><span class="fill" style="width:26.7%"></span></div>
+        </li>
+        <li role="listitem">
+          <div class="bar-top"><span class="bar-name">Reviews gained</span><span class="bar-value">7</span></div>
+          <div class="track"><span class="fill" style="width:8.1%"></span></div>
+        </li>
+        <li role="listitem">
+          <div class="bar-top"><span class="bar-name">Jobs booked</span><span class="bar-value">31</span></div>
+          <div class="track"><span class="fill" style="width:36%"></span></div>
+        </li>
+      </ul>
+      <p class="small">Longer bar means a higher number.</p>
+    </div>
+  </section>
+</main>
+<footer class="col foot">
+  <a href="https://rangeroadtech.com/" target="_blank" rel="noopener noreferrer">Demo built by Range Road Technologies</a>
+</footer>
+<noscript><style>.panel[hidden]{display:block !important}</style></noscript>
+<script>
+(function () {
+  var tabs = document.querySelectorAll('[role="tab"]');
+
+  function panelFor(tab) {
+    return document.getElementById(tab.getAttribute('aria-controls'));
+  }
+
+  function select(index, moveFocus) {
+    var n;
+    for (n = 0; n < tabs.length; n++) {
+      var on = n === index;
+      tabs[n].setAttribute('aria-selected', on ? 'true' : 'false');
+      tabs[n].tabIndex = on ? 0 : -1;
+      var panel = panelFor(tabs[n]);
+      if (panel) panel.hidden = !on;
+    }
+    if (moveFocus) tabs[index].focus();
+  }
+
+  var t;
+  for (t = 0; t < tabs.length; t++) {
+    (function (index) {
+      tabs[index].addEventListener('click', function () {
+        select(index, false);
+      });
+      tabs[index].addEventListener('keydown', function (e) {
+        var key = e.key;
+        var next = null;
+        if (key === 'ArrowRight' || key === 'ArrowDown') next = (index + 1) % tabs.length;
+        else if (key === 'ArrowLeft' || key === 'ArrowUp') next = (index + tabs.length - 1) % tabs.length;
+        else if (key === 'Home') next = 0;
+        else if (key === 'End') next = tabs.length - 1;
+        if (next === null) return;
+        e.preventDefault();
+        select(next, true);
+      });
+    })(t);
+  }
+
+  var links = document.querySelectorAll('a[href="#"]');
+  var k;
+  for (k = 0; k < links.length; k++) {
+    links[k].addEventListener('click', function (e) {
+      e.preventDefault();
+    });
+  }
+})();
+</script>
+</body>
+</html>
