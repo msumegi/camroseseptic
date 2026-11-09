@@ -2,6 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://camroseseptic.ca/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://camroseseptic.ca/services/</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://camroseseptic.ca/service-area/</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://camroseseptic.ca/septic-tips/</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://camroseseptic.ca/request/</loc>
+    <lastmod>2026-11-09</lastmod>
   </url>
 </urlset>
