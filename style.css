@@ -416,8 +416,16 @@ h2 { font-size: clamp(1.55rem, 1.2rem + 1.1vw, 2.2rem); }
 .county-map {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    ". beaver"
+    "camrose ."
+    "stettler flagstaff";
   gap: 0.65rem;
 }
+.place-beaver { grid-area: beaver; }
+.place-camrose { grid-area: camrose; }
+.place-stettler { grid-area: stettler; }
+.place-flagstaff { grid-area: flagstaff; }
 .place {
   border: 1.5px solid var(--spruce);
   border-radius: 0.4rem;
