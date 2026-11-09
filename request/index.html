@@ -4,21 +4,28 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Request a septic pump-out | Camrose County</title>
-<meta name="description" content="Send a free septic pump-out request for Camrose County or Stettler County. One local licensed septic company contacts you.">
+<meta name="description" content="Send a free septic pump-out request for Camrose County, Daysland, Tofield, or Stettler County.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://camroseseptic.ca/request/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Request a septic pump-out | Camrose County">
-<meta property="og:description" content="Send a free septic pump-out request for Camrose County or Stettler County. One local licensed septic company contacts you.">
+<meta property="og:description" content="Send a free septic pump-out request for Camrose County, Daysland, Tofield, or Stettler County.">
 <meta property="og:url" content="https://camroseseptic.ca/request/">
+<meta property="og:image" content="https://camroseseptic.ca/images/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Canola and an aspen bluff beside the highway near Sylvan Lake, Alberta.">
 <meta property="og:locale" content="en_CA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://camroseseptic.ca/images/og.jpg">
 <meta name="theme-color" content="#f3efe6">
-<link rel="icon" href="/favicon.ico" sizes="16x16">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/source-sans-3-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/style.css">
-<script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
 <a class="skip" href="#content">Skip to content</a>
@@ -45,11 +52,11 @@
   </div>
 </header>
 <main id="content" class="form-page">
-  <div class="wrap">
-    <p class="eyebrow">Request</p>
-    <h1>Request a septic pump-out</h1>
-    <div class="formbox">
-<!-- FORM BACKEND: FormSubmit.co (free, no account). Leads go to Matthew's email, with a copy to the bot inbox for logging. After activation, FormSubmit gives a random alias; swap it in for the email in the action URL so the address isn't visible in the page source. -->
+  <div class="wrap request-layout">
+    <div>
+      <p class="eyebrow">Request</p>
+      <h1>Request a septic pump-out</h1>
+      <div class="formbox">
 <form action="https://formsubmit.co/00a5cc2108b1ede48153a5cf5424223d" method="POST" name="septic-request">
 <input type="hidden" name="_subject" value="New septic pumping request - camroseseptic.ca">
 <input type="hidden" name="_next" value="https://camroseseptic.ca/thanks.html">
@@ -64,7 +71,7 @@
 <label class="optional">What do you need?
 <select name="service"><option>Routine septic pump-out</option><option>Holding tank pump-out</option><option>Urgent backup / alarm</option><option>Frozen line</option><option>Pump-out before sale</option><option>Other</option></select></label>
 <label>When?<select name="timing" required><option value="" disabled selected>Choose when</option><option value="As soon as possible (urgent)" data-urgent>As soon as possible (urgent)</option><option>Within 2 weeks</option><option>Within a month</option><option>Just pricing for now</option></select></label>
-<p class="note">If sewage is backing up into the house right now, avoid running water and flushing until the tank is pumped.</p>
+<p class="note urgent-note">If sewage is backing up into the house right now, avoid running water and flushing until the tank is pumped.</p>
 <label class="optional">Details (optional): tank size, access, last pumped<textarea name="details" rows="3"></textarea></label>
 <label class="check"><input type="checkbox" name="consent_share" value="yes" required> I agree that my details are shared with one local licensed septic company so they can contact me about this request.</label>
 <label class="check optional"><input type="checkbox" name="consent_marketing" value="yes"> Optional: send me an occasional reminder when my tank is likely due. (You can unsubscribe at any time.)</label>
@@ -73,11 +80,12 @@
 <p class="fine">Your request goes to one local licensed septic company.</p>
 </div>
 </form>
+      </div>
     </div>
     <section id="privacy" class="privacy">
       <h2>Privacy</h2>
-      <p>We collect only what you type in the form, and use it only to pass your request to one local licensed septic company serving your area and to follow up on that request. We don't sell your information to anyone else, and we don't add you to any mailing list unless you tick the optional reminder box. You can ask us to see, correct or delete your information at any time using the contact address below. This follows Canada's privacy law (PIPEDA) and anti&#8209;spam law (CASL).</p>
-      <p>Contact: <a href="mailto:rangeroadtech+septic@mail.grokbot.com">rangeroadtech+septic@mail.grokbot.com</a></p>
+      <p>We collect only what you type in the form, and use it only to pass your request to one local licensed septic company serving your area and to follow up on that request. We don't sell your information to anyone else, and we don't add you to any mailing list unless you tick the optional reminder box. You can ask us to see, correct or delete your information at any time by email. This follows Canada's privacy law (PIPEDA) and anti&#8209;spam law (CASL).</p>
+      <p><a href="mailto:rangeroadtech+septic@mail.grokbot.com">rangeroadtech+septic@mail.grokbot.com</a></p>
     </section>
   </div>
 </main>
@@ -91,26 +99,29 @@
       <li><a href="/septic-tips/">Septic tips</a></li>
       <li><a href="/request/" aria-current="page">Request</a></li>
     </ul>
-    <p class="credit">Photographs by Kerri Singh and Kevin Teague, Pexels.</p>
   </div>
 </footer>
 <script src="/site.js"></script>
 <script>
 (function () {
-  var timing = document.querySelector('[name=timing]');
-  var extra = document.querySelectorAll('.optional');
-  if (!timing || !extra.length) return;
+  document.documentElement.classList.add("form-ready");
+  var timing = document.querySelector("[name=timing]");
+  var extra = document.querySelectorAll(".optional");
+  var note = document.querySelector(".urgent-note");
+  if (!timing) return;
   function sync() {
     var chosen = timing.options[timing.selectedIndex];
-    var urgent = !!(chosen && chosen.hasAttribute('data-urgent'));
-    for (var i = 0; i < extra.length; i++) {
+    var urgent = !!(chosen && chosen.hasAttribute("data-urgent"));
+    var i, j, fields;
+    for (i = 0; i < extra.length; i++) {
       extra[i].hidden = urgent;
-      var fields = extra[i].querySelectorAll('input, select, textarea');
-      for (var j = 0; j < fields.length; j++) fields[j].disabled = urgent;
+      fields = extra[i].querySelectorAll("input, select, textarea");
+      for (j = 0; j < fields.length; j++) fields[j].disabled = urgent;
     }
+    if (note) note.classList.toggle("is-on", urgent);
   }
-  timing.addEventListener('change', sync);
-  window.addEventListener('pageshow', sync);
+  timing.addEventListener("change", sync);
+  window.addEventListener("pageshow", sync);
   sync();
 })();
 </script>
